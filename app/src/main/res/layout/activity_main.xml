@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.victor_pc.shimmereffect.model.Item">
+        </variable>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <io.supercharge.shimmerlayout.ShimmerLayout
+                        android:id="@+id/shimmerLayout"
+                        app:shimmer_animation_duration="1200"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <include layout="@layout/item_layout"></include>
+                            <include layout="@layout/item_layout"></include>
+                            <include layout="@layout/item_layout"></include>
+                            <include layout="@layout/item_layout"></include>
+                            <include layout="@layout/item_layout"></include>
+                            <include layout="@layout/item_layout"></include>
+                        </LinearLayout>
+
+                    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/llContent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="75dp"
+                                android:orientation="vertical"
+                                android:background="@color/black">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <EditText
+                                        android:id="@+id/etSearch"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="15dp"
+                                        android:background="@color/background"
+                                        android:drawablePadding="15dp"
+                                        android:paddingLeft="15dp"
+                                        android:hint="Search name"
+                                        android:clickable="true"
+                                        android:paddingRight="10dp"
+                                        android:drawableRight="@drawable/ic_close_black_24dp"
+                                        android:drawableLeft="@drawable/ic_search"/>
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:visibility="visible"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="12dp">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <include layout="@layout/show_more"
+                    android:id="@+id/layout_showMore"
+                    android:visibility="gone"></include>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_floatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:visibility="visible">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:fabSize="normal"
+                app:backgroundTint="@android:color/background_dark"
+                app:srcCompat="@drawable/fab_white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

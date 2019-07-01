@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="pin"
+            type="com.example.victor_pc.shimmereffect.model.PinLock"></variable>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line_background_pin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_passcode_text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pin_lock_text"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@color/pin_color_text_two"
+                android:layout_marginBottom="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/pin_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/oval_pin_grey"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/pin_2"/>
+
+                    <ImageView
+                        android:id="@+id/pin_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/oval_pin_grey"
+                        app:layout_constraintLeft_toRightOf="@id/pin_1"
+                        app:layout_constraintRight_toLeftOf="@id/pin_3"/>
+
+                    <ImageView
+                        android:id="@+id/pin_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/oval_pin_grey"
+                        app:layout_constraintLeft_toRightOf="@id/pin_2"
+                        app:layout_constraintRight_toLeftOf="@id/pin_4"/>
+
+                    <ImageView
+                        android:id="@+id/pin_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/oval_pin_grey"
+                        app:layout_constraintLeft_toRightOf="@id/pin_3"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_1"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:background="@color/line_background_pin"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btn_2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_1"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="2"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                    <Button
+                        android:id="@+id/btn_3"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="3"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_4"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="4"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                    <Button
+                        android:id="@+id/btn_5"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_4"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_6"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="5"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                    <Button
+                        android:id="@+id/btn_6"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_5"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_7"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="7"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                    <Button
+                        android:id="@+id/btn_8"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_7"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_9"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="8"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                    <Button
+                        android:id="@+id/btn_9"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_8"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="9"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"
+                        android:layout_marginBottom="25dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Cancel"
+                        android:textSize="18dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"/>
+
+                    <Button
+                        android:id="@+id/btn_0"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/btn_cancel"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_delete"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="0"
+                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:background="@color/line_background_pin"/>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_delete"
+                        android:layout_width="85dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/btn_0"
+                        app:layout_constraintRight_toRightOf="parent"
+                        >
+
+                        <ImageButton
+                            android:layout_centerInParent="true"
+                            android:duplicateParentState="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:background="@drawable/ic_backspace_black_24dp"/>
+
+                    </RelativeLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

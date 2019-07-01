@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShimmerEffect</string>
+    <string name="profile_nama">Name: %s</string>
+    <string name="profile_pekerjaan">Pekerjaan: %s</string>
+    <string name="profile_gender">Gender: %s</string>
+    <string name="pin_lock_text">Enter the passcode below.</string>
+    <string name="pin_lock_again_text">Enter the passcode again.</string>
+    <string name="set_passcode_text">Set passcode</string>
+    <string name="enter_passcode_text">Enter passcode</string>
+</resources>
